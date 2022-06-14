@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+
+:root{
+    --leading: 2em;
+}
+
+body {
+    font-family: 'Secular One', sans-serif;
+    margin: 0;
+}
+
+.hero-bg{
+    background: url('images/bg.jpg') ;
+    background-position: 12% 83%;
+    background-size: cover;
+    color : #E2DEA9;
+    text-align : center;
+    padding-bottom: 4em ;
+}
+
+header {
+    padding : 1em 0;
+}
+
+.hero-bg a {
+    color :#5FD068 ;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hero-bg a:hover{
+    color :#ee4760c4 ;
+}
+
+section{
+    margin : 0 1em
+}
+
+h1{
+    font-size: 2.5rem;
+    margin : 2em 0 1.2em;
+}
+
+h1 span {
+    text-transform: uppercase;
+    display : block;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+
+
+.hero-bg p {
+    font-weight: bold;
+    margin: 0em 1em 3em;
+}
+
+.form-container{
+    background-color: #9cc29f;
+    border-radius: .8em;
+    margin: 2em -1em 0;
+    padding: 2em;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.3) ;
+}
+
+label {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+input[type = text]{
+    border : 1px solid #ffffff;
+    width: 25em;
+    box-sizing: border-box;
+    padding: 1px;
+    border-radius: .3em;
+    margin-top: 1.2em;
+
+}
+
+.form-container p{
+    color: #ffffff;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: .3em;
+}
+
+
+input[type = button]{
+    background-color: #e08018 ;
+    border: none;
+    width: 250px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 1em 0;
+    border-radius: .5em;
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+input[type = button]:hover{
+    background-color: #a7631a ;
+
+}
+
+.right-col{
+    text-align: center;
+    margin: 3em 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    display : block;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+
+h2::before{
+
+content: '';
+position: absolute;
+width: 11.6em;
+background: #5FD068;
+height:.4em;
+bottom: 0;
+z-index: -1;
+margin-left: -.3em;
+}
+
+img{
+    width : 100%
+}
+
+p{
+    line-height: var(--leading);
+}
+
+
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width:100%;
+    background: rgba(0,0,0,.9) ;
+    z-index: 1;
+    place-content: center;
+    color: #ffffff;
+    display: none;
+    opacity: 0;
+}
+
+.animate-overlay{
+    animation: overlay 3s forwards;
+}
+
+
+@media (min-width: 730px) {
+
+    section {
+        margin: 0 4em;
+    }
+    .form-container {
+        margin: 2em -4em 0;
+    }
+
+}
+
+
+
+.top{
+    animation: fadeIn 2s forwards;
+}
+
+.authentic{
+    animation: fadeOut 2s forwards ;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 0;
+        transform: translateX(2em);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes overlay {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
